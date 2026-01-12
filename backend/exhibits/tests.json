@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "name": "Get all exhibits",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Create exhibit without required fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "title": ""
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
